@@ -1,0 +1,25 @@
+{
+  "name": "@simonsinclair/pgr",
+  "version": "0.1.0",
+  "description": "A tiny pagination library.",
+  "main": "source/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonsinclair/pgr.git"
+  },
+  "keywords": [
+    "paginate",
+    "pagination",
+    "pager",
+    "pgr"
+  ],
+  "author": "Simon Sinclair",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonsinclair/pgr/issues"
+  },
+  "homepage": "https://github.com/simonsinclair/pgr#readme"
+}
