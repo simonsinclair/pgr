@@ -4,7 +4,10 @@
   "description": "A tiny pagination library.",
   "main": "source/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc --watch --pretty",
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
