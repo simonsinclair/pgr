@@ -9,6 +9,8 @@ export const getRange = (count: number, startIndex: number): number[] => {
 };
 
 const pgr: Pgr = (totalPages, currentPage, length) => {
+  if (length >= totalPages) return getRange(totalPages, 1);
+
   const centerPage = Math.floor(length / 2);
   let pages;
 
