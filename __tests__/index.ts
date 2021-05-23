@@ -1,4 +1,4 @@
-import pgr, { getRange } from '../src';
+import pgr, { getRange } from '../dist';
 
 describe('getRange', () => {
   it('returns a range', () => {
