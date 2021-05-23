@@ -13,6 +13,9 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=12"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simonsinclair/pgr.git"
