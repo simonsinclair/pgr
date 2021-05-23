@@ -20,7 +20,7 @@
     "paginate",
     "paging"
   ],
-  "author": "Simon Sinclair",
+  "author": "Simon Sinclair <simon@simonsinclair.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/simonsinclair/pgr/issues"
