@@ -8,7 +8,7 @@ describe('getPageRange', () => {
 });
 
 describe('pgr', () => {
-  it('paginates odd number of page', () => {
+  it('paginates an odd number of page', () => {
     expect(pgr(9, 1, 7)).toEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(pgr(9, 2, 7)).toEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(pgr(9, 3, 7)).toEqual([1, 2, 3, 4, 5, 6, 7]);
