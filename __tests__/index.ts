@@ -8,7 +8,12 @@ describe('getRange', () => {
 });
 
 describe('pgr', () => {
-  it('returns a pagination range for an odd number of pages', () => {
+  it("returns valid pagination ranges when 'totalPages' is less than or equal to 'length'", () => {
+    expect(pgr(6, 1, 10)).toEqual([1, 2, 3, 4, 5, 6]);
+    expect(pgr(6, 3, 6)).toEqual([1, 2, 3, 4, 5, 6]);
+  });
+
+  it("returns valid pagination ranges when 'length' is an odd number", () => {
     expect(pgr(9, 1, 7)).toEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(pgr(9, 2, 7)).toEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(pgr(9, 3, 7)).toEqual([1, 2, 3, 4, 5, 6, 7]);
@@ -20,7 +25,7 @@ describe('pgr', () => {
     expect(pgr(9, 9, 7)).toEqual([3, 4, 5, 6, 7, 8, 9]);
   });
 
-  it('returns a pagination range for an even number of pages', () => {
+  it("returns valid pagination ranges when 'length' is an even number", () => {
     expect(pgr(10, 1, 6)).toEqual([1, 2, 3, 4, 5, 6]);
     expect(pgr(10, 2, 6)).toEqual([1, 2, 3, 4, 5, 6]);
     expect(pgr(10, 3, 6)).toEqual([1, 2, 3, 4, 5, 6]);
