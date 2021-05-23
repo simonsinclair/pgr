@@ -4,6 +4,7 @@
   "description": "A tiny pagination range creator.",
   "main": "dist/index.js",
   "scripts": {
+    "prepare": "npm run build",
     "dev": "tsc --watch --pretty",
     "build": "tsc",
     "test": "jest",
