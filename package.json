@@ -2,7 +2,7 @@
   "name": "@simonsinclair/pgr",
   "version": "0.1.0",
   "description": "A tiny pagination library.",
-  "main": "source/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "tsc --watch --pretty",
     "build": "tsc",
