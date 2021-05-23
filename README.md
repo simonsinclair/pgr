@@ -4,30 +4,56 @@
 
 ## Install
 
-TBC.
+```sh
+npm install @simonsinclair/pgr
+```
 
 ## Usage
 
+For example, create pagination for a list of articles.
+
 ```js
-const items = pgr(10, 1, 5);
+import pgr from 'pgr';
+
+const DISPLAY_LENGTH = 7;
+
+const articles = [
+  { title: 'Article 1' },
+  { title: 'Article 2' },
+  // ...
+];
+
+const currentPage = 5;
+
+const pagination = pgr(articles.length, currentPage, DISPLAY_LENGTH);
+
+console.log(pagination);
 ```
 
-TBC.
+```js
+[2, 3, 4, 5, 6, 7, 8];
+```
 
 ## API
 
-### pgr(pageCount, currentPage, displayCount)
+### pgr(totalPages, currentPage, displayLength)
 
-Returns an array of pages the length of `displayCount`, centred around `currentPage`.
+Returns an array of pages the specified length. `pgr` will attempt to keep the current page centered in the array.
 
-#### pageCount
+#### totalPages
 
-Type: `number`;
+Type: `number`.
+
+The total number of pages in the collection.
 
 #### currentPage
 
-Type: `number`;
+Type: `number`.
 
-#### displayCount
+The current page.
 
-Type: `number`;
+#### displayLength
+
+Type: `number`.
+
+The number of pages to display.
