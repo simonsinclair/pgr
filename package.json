@@ -14,10 +14,11 @@
     "url": "git+https://github.com/simonsinclair/pgr.git"
   },
   "keywords": [
-    "paginate",
     "pagination",
     "pager",
-    "pgr"
+    "paginator",
+    "paginate",
+    "paging"
   ],
   "author": "Simon Sinclair",
   "license": "MIT",
