@@ -1,14 +1,14 @@
-import pgr, { getPageRange } from '../src';
+import pgr, { getRange } from '../src';
 
-describe('getPageRange', () => {
-  it('returns a page range', () => {
-    expect(getPageRange(10, 1)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-    expect(getPageRange(5, 2)).toEqual([2, 3, 4, 5, 6]);
+describe('getRange', () => {
+  it('returns a range', () => {
+    expect(getRange(10, 1)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    expect(getRange(5, 2)).toEqual([2, 3, 4, 5, 6]);
   });
 });
 
 describe('pgr', () => {
-  it('paginates an odd number of page', () => {
+  it('returns a pagination array for an odd number of pages', () => {
     expect(pgr(9, 1, 7)).toEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(pgr(9, 2, 7)).toEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(pgr(9, 3, 7)).toEqual([1, 2, 3, 4, 5, 6, 7]);
@@ -20,7 +20,7 @@ describe('pgr', () => {
     expect(pgr(9, 9, 7)).toEqual([3, 4, 5, 6, 7, 8, 9]);
   });
 
-  it('paginates an even number of pages', () => {
+  it('returns a pagination array for an even number of pages', () => {
     expect(pgr(10, 1, 6)).toEqual([1, 2, 3, 4, 5, 6]);
     expect(pgr(10, 2, 6)).toEqual([1, 2, 3, 4, 5, 6]);
     expect(pgr(10, 3, 6)).toEqual([1, 2, 3, 4, 5, 6]);

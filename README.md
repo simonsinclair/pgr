@@ -36,15 +36,15 @@ console.log(pagination);
 
 ## API
 
-### pgr(totalPages, currentPage, displayLength)
+### pgr(totalPages, currentPage, length)
 
-Returns an array of pages the specified length. `pgr` will attempt to keep the current page centered in the array.
+Returns an array of pages the specified length. `pgr` will attempt to center the array around the current page.
 
 #### totalPages
 
 Type: `number`.
 
-The total number of pages in the collection.
+The total number of pages.
 
 #### currentPage
 
@@ -52,8 +52,8 @@ Type: `number`.
 
 The current page.
 
-#### displayLength
+#### length
 
 Type: `number`.
 
-The number of pages to display.
+The length of the pagination array.
