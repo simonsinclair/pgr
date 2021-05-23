@@ -2,6 +2,8 @@
 
 > A tiny pagination range creator.
 
+[![CI](https://github.com/simonsinclair/pgr/actions/workflows/ci.yml/badge.svg)](https://github.com/simonsinclair/pgr/actions/workflows/ci.yml)
+
 ## Install
 
 ```sh
