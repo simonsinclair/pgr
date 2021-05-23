@@ -1,6 +1,6 @@
 # pgr
 
-> A tiny (839B) pagination library.
+> A tiny paginator.
 
 ## Install
 
