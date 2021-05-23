@@ -1,14 +1,14 @@
 type Pgr = (
-  pageCount: number,
+  totalPages: number,
   currentPage: number,
-  displayCount: number,
+  displayLength: number,
 ) => number[];
 
 export const getPageRange = (count: number, startPage: number): number[] => {
   return Array.from({ length: count }, (_, increment) => startPage + increment);
 };
 
-const pgr: Pgr = (pageCount, currentPage, displayCount) => {
+const pgr: Pgr = (totalPages, currentPage, displayLength) => {
   let pages;
 
   /**
@@ -16,15 +16,15 @@ const pgr: Pgr = (pageCount, currentPage, displayCount) => {
    * - if, at end
    * - if, in middle
    */
-  if (currentPage < Math.floor(displayCount / 2) + 1) {
-    pages = getPageRange(displayCount, 1);
-  } else if (currentPage >= pageCount - Math.floor(displayCount / 2)) {
-    pages = getPageRange(displayCount, pageCount - displayCount + 1);
+  if (currentPage < Math.floor(displayLength / 2) + 1) {
+    pages = getPageRange(displayLength, 1);
+  } else if (currentPage >= totalPages - Math.floor(displayLength / 2)) {
+    pages = getPageRange(displayLength, totalPages - displayLength + 1);
   } else {
-    const offset = displayCount % 2 ? 0 : 1;
+    const offset = displayLength % 2 ? 0 : 1;
     pages = getPageRange(
-      displayCount,
-      currentPage - Math.floor(displayCount / 2) + offset,
+      displayLength,
+      currentPage - Math.floor(displayLength / 2) + offset,
     );
   }
 
