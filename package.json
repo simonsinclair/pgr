@@ -16,6 +16,7 @@
   "engines": {
     "node": ">=12"
   },
+  "types": "dist/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
