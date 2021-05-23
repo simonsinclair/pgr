@@ -15,7 +15,7 @@ npm install @simonsinclair/pgr
 For example, create pagination for a list of articles.
 
 ```js
-import pgr from 'pgr';
+const { default: pgr } = require('@simonsinclair/pgr');
 
 const DISPLAY_LENGTH = 7;
 
