@@ -27,7 +27,9 @@
     "pager",
     "paginator",
     "paginate",
-    "paging"
+    "paging",
+    "react",
+    "vue"
   ],
   "author": "Simon Sinclair <simon@simonsinclair.com>",
   "license": "MIT",
