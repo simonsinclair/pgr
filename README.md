@@ -17,7 +17,8 @@ For example, create pagination for a list of articles.
 ```js
 const { default: pgr } = require('@simonsinclair/pgr');
 
-const DISPLAY_LENGTH = 7;
+const ARTICLES_PER_PAGE = 20;
+const PAGINATION_LENGTH = 7;
 
 const articles = [
   { title: 'Article 1' },
@@ -25,9 +26,10 @@ const articles = [
   // ...
 ];
 
+const totalPages = Math.ceil(articles.length / ARTICLES_PER_PAGE);
 const currentPage = 5;
 
-const pagination = pgr(articles.length, currentPage, DISPLAY_LENGTH);
+const pagination = pgr(totalPages, currentPage, PAGINATION_LENGTH);
 
 console.log(pagination);
 ```
