@@ -1,9 +1,17 @@
 import pgr, { getRange } from '../dist';
 
 describe('getRange', () => {
-  it('returns a range', () => {
-    expect(getRange(10, 1)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-    expect(getRange(5, 2)).toEqual([2, 3, 4, 5, 6]);
+  it('returns expected ranges', () => {
+    expect(getRange(10, 1, (page) => page)).toEqual([
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    ]);
+    expect(getRange(5, 2, (page) => ({ page }))).toEqual([
+      { page: 2 },
+      { page: 3 },
+      { page: 4 },
+      { page: 5 },
+      { page: 6 },
+    ]);
   });
 });
 
@@ -36,5 +44,16 @@ describe('pgr', () => {
     expect(pgr(10, 8, 6)).toEqual([5, 6, 7, 8, 9, 10]);
     expect(pgr(10, 9, 6)).toEqual([5, 6, 7, 8, 9, 10]);
     expect(pgr(10, 10, 6)).toEqual([5, 6, 7, 8, 9, 10]);
+  });
+
+  it('returns expected pagination range when callback is passed', () => {
+    expect(pgr(6, 1, 10, (page) => `Page ${page}`)).toEqual([
+      'Page 1',
+      'Page 2',
+      'Page 3',
+      'Page 4',
+      'Page 5',
+      'Page 6',
+    ]);
   });
 });
