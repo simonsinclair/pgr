@@ -1,8 +1,8 @@
 # pgr
 
-> A tiny (~316B) pagination range creator.
+> A tiny pagination range creator.
 
-[![CI](https://github.com/simonsinclair/pgr/actions/workflows/ci.yml/badge.svg)](https://github.com/simonsinclair/pgr/actions/workflows/ci.yml)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@simonsinclair/pgr)
 
 ## Install
 
@@ -63,6 +63,7 @@ The length of the pagination array.
 #### callback
 
 Type: `Function`.
+
 Default: `(page) => page`.
 
 A function that is called on each page in the range.
