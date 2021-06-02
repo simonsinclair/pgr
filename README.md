@@ -1,6 +1,6 @@
 # pgr
 
-> A tiny pagination range creator.
+> A tiny (~316B) pagination range creator.
 
 [![CI](https://github.com/simonsinclair/pgr/actions/workflows/ci.yml/badge.svg)](https://github.com/simonsinclair/pgr/actions/workflows/ci.yml)
 
@@ -12,12 +12,11 @@ npm install @simonsinclair/pgr
 
 ## Usage
 
-For example, create pagination for a list of articles.
-
 ```js
 const { default: pgr } = require('@simonsinclair/pgr');
 
-const DISPLAY_LENGTH = 7;
+const ARTICLES_PER_PAGE = 20;
+const PAGINATION_LENGTH = 7;
 
 const articles = [
   { title: 'Article 1' },
@@ -25,9 +24,10 @@ const articles = [
   // ...
 ];
 
+const totalPages = Math.ceil(articles.length / ARTICLES_PER_PAGE);
 const currentPage = 5;
 
-const pagination = pgr(articles.length, currentPage, DISPLAY_LENGTH);
+const pagination = pgr(totalPages, currentPage, PAGINATION_LENGTH);
 
 console.log(pagination);
 ```
@@ -38,7 +38,7 @@ console.log(pagination);
 
 ## API
 
-### pgr(totalPages, currentPage, length)
+### pgr(totalPages, currentPage, length, callback?)
 
 Returns an array of pages the specified length. `pgr` will attempt to center the array around the current page.
 
@@ -59,3 +59,10 @@ The current page.
 Type: `number`.
 
 The length of the pagination array.
+
+#### callback
+
+Type: `Function`.
+Default: `(page) => page`.
+
+A function that is called on each page in the range.
