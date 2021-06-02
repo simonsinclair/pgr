@@ -12,8 +12,6 @@ npm install @simonsinclair/pgr
 
 ## Usage
 
-For example, create pagination for a list of articles.
-
 ```js
 const { default: pgr } = require('@simonsinclair/pgr');
 
