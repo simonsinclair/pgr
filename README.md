@@ -36,6 +36,28 @@ console.log(pagination);
 [2, 3, 4, 5, 6, 7, 8];
 ```
 
+## Tips
+
+### Using the callback parameter
+
+Instead of mapping over the `pgr` array, you could pass a JSX element as a callback.
+
+```jsx
+<ol>
+  {pgr(totalPages, currentPage, PAGINATION_LENGTH, (pageNum) => (
+    <li key={pageNum}>
+      <button>{pageNum}</button>
+    </li>
+  ))}
+</ol>
+```
+
+#### Example
+
+```js
+
+```
+
 ## API
 
 ### pgr(totalPages, currentPage, length, callback?)
