@@ -40,7 +40,7 @@ console.log(pagination);
 
 ### Using the callback parameter
 
-Instead of mapping over the `pgr` array, you could pass a JSX element as a callback.
+Instead of mapping over `pgr`'s array in JSX, you could pass an element as a callback.
 
 ```jsx
 <ol>
@@ -50,12 +50,6 @@ Instead of mapping over the `pgr` array, you could pass a JSX element as a callb
     </li>
   ))}
 </ol>
-```
-
-#### Example
-
-```js
-
 ```
 
 ## API
