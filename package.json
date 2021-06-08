@@ -1,6 +1,6 @@
 {
   "name": "@simonsinclair/pgr",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "A tiny pagination range creator.",
   "main": "dist/index.js",
   "scripts": {
