@@ -83,3 +83,7 @@ Type: `Function`.
 Default: `(page) => page`.
 
 A function that is called on each page in the range.
+
+### Supported browsers
+
+Pgr supports IE11, and all modern browsers.
