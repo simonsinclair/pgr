@@ -9,5 +9,8 @@
   "env": {
     "node": true,
     "jest": true
+  },
+  "rules": {
+    "complexity": ["warn", 4]
   }
 }
