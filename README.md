@@ -7,7 +7,7 @@
 ## Install
 
 ```sh
-npm install @simonsinclair/pgr
+npm i @simonsinclair/pgr
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ console.log(pagination);
 
 ### Using the callback parameter
 
-Instead of mapping over `pgr`'s array in JSX, you could pass an element as a callback.
+For example, pass a JSX Element as a callback.
 
 ```jsx
 <ol>
@@ -86,4 +86,4 @@ A function that is called on each page in the range.
 
 ## Supported browsers
 
-Pgr supports IE11, and all modern browsers.
+IE11, and all modern browsers.
