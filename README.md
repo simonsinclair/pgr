@@ -1,6 +1,6 @@
 # pgr
 
-> A tiny pagination range creator.
+> A tiny pagination range creator for your pagination UI.
 
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@simonsinclair/pgr)
 

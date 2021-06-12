@@ -2,6 +2,7 @@
   "name": "@simonsinclair/pgr",
   "version": "1.0.0",
   "description": "A tiny pagination range creator.",
+  "description": "A tiny pagination range creator for your pagination UI.",
   "main": "dist/index.js",
   "scripts": {
     "prepare": "npm run build",
