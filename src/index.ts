@@ -25,17 +25,12 @@ const pgr: Pgr = (
 ) => {
   const length = Math.min(totalPages, rawLength);
   const centerPage = Math.floor(length / 2);
+  const offset = length % 2 ? 0 : 1;
 
-  let pages;
-  if (currentPage < centerPage + 1) {
-    pages = getRange(length, 1, callback);
-  } else if (currentPage >= totalPages - centerPage) {
-    pages = getRange(length, totalPages - length + 1, callback);
-  } else {
-    const offset = length % 2 ? 0 : 1;
-    pages = getRange(length, currentPage - centerPage + offset, callback);
-  }
-  return pages;
+  if (currentPage < centerPage + 1) return getRange(length, 1, callback);
+  if (currentPage >= totalPages - centerPage)
+    return getRange(length, totalPages - length + 1, callback);
+  return getRange(length, currentPage - centerPage + offset, callback);
 };
 
 export default pgr;
